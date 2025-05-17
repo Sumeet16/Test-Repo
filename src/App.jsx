@@ -5,6 +5,9 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl1 = import.meta.env.VITE_PUBLIC_KEY;
+  const apiUrl2 = import.meta.env.VITE_NAME;
 
   return (
     <>
@@ -17,6 +20,9 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <p>{apiUrl}</p>
+      <p>{apiUrl1}</p>
+      <p>{apiUrl2}</p>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
